@@ -16,21 +16,28 @@
 
 function printPyramid(r) {
 
-    let str = "";
+    let div;
+    let rowStr;
+    let tNode;
+    let str;
 
     for (i = 1; i <= r; i++) {
+      str="";
       //printing spaces
       for (j = 0; j < r - i; j++) {
         str += ".";
       }
       //printing hashes
-      for (k = 0; k < i+1; k++) {
+      for (k = -1; k < i; k++) {
         str += "#";
       }
-      str += "\n";
+      console.log(str);
+      rowStr = document.createElement("p");
+      tNode = document.createTextNode(str);
+      rowStr.appendChild(tNode);
+      div = document.getElementById("pyramid");
+      div.appendChild(rowStr);
     }
-    console.log(str);
-
 }
 let r = parseInt(prompt("Enter a number for the height of the pyramid: "));
 printPyramid(r);
