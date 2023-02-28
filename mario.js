@@ -15,8 +15,7 @@
 }*/
 
 function printPyramid(r) {
-
-    let div;
+    let div = document.getElementById('pyramid').innerHTML = '';
     let rowStr;
     let tNode;
     let str;
@@ -39,5 +38,10 @@ function printPyramid(r) {
       div.appendChild(rowStr);
     }
 }
-let r = parseInt(prompt("Enter a number for the height of the pyramid: "));
-printPyramid(r);
+const btn = document.getElementById("btn");
+btn.addEventListener("click", determineHeightAndThenDrawPyramid);
+
+function determineHeightAndThenDrawPyramid() {
+  let inP = document.getElementById("height").value;
+  printPyramid(inP);
+}
