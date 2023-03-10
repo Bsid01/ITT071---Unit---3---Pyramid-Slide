@@ -30,7 +30,6 @@ function printPyramid(r) {
       for (k = -1; k < i; k++) {
         str += "#";
       }
-      console.log(str);
       rowStr = document.createElement("p");
       tNode = document.createTextNode(str);
       rowStr.appendChild(tNode);
@@ -38,10 +37,11 @@ function printPyramid(r) {
       div.appendChild(rowStr);
     }
 }
-const btn = document.getElementById("btn");
-btn.addEventListener("click", determineHeightAndThenDrawPyramid);
 
-function determineHeightAndThenDrawPyramid() {
-  let inP = document.getElementById("height").value;
+let inPut = document.querySelector("#height");
+inPut.addEventListener("input", myFunction);
+
+function myFunction() {
+  let inP = document.querySelector("#height").value;
   printPyramid(inP);
 }
