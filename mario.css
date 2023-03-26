@@ -1,0 +1,44 @@
+#pyramid {
+  line-height: 0;
+  font-size: 30px;
+  color: gainsboro;
+  padding: 25px;
+}
+
+body {
+  font-family: "Courier New", monospace;
+  text-align: center;
+  background-color: dimgray;
+}
+#lab1 {
+  font-size: 18px;
+}
+#lab2 {
+  font-size: 18px;
+}
+#lab3 {
+  font-weight: bold;
+  font-size: 18px;
+}
+#header {
+  background-color: gainsboro;
+  color:gray;
+  width: 900px;
+  text-align: center;
+  margin: 15px auto 18px auto;
+  padding: 20px;
+  border: solid 2px transparent;
+  border-radius: 5px;
+}
+#div1 {
+  border: 2px solid gainsboro;
+  border-radius: 5px;
+  width: 700px;
+  margin: auto;
+  background-color: gray;
+}
+
+#div2 {
+  background-color: darkgray;
+  padding: 25px;
+}

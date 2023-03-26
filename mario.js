@@ -16,32 +16,37 @@
 
 function printPyramid(r) {
     let div = document.getElementById('pyramid').innerHTML = '';
+    let drop = document.getElementById('dropdown').value;
+    let lab = document.getElementById('lab3');
     let rowStr;
     let tNode;
     let str;
 
     for (i = 1; i <= r; i++) {
-      str="";
+      str = ""
       //printing spaces
       for (j = 0; j < r - i; j++) {
-        str += ".";
+        str += " ";
       }
       //printing hashes
       for (k = -1; k < i; k++) {
-        str += "#";
+        str += drop;
       }
       rowStr = document.createElement("p");
       tNode = document.createTextNode(str);
       rowStr.appendChild(tNode);
       div = document.getElementById("pyramid");
       div.appendChild(rowStr);
+      lab.innerHTML = str.length-1;
     }
 }
+
+document.getElementById("pyramid").style.whiteSpace = "pre";
 
 let inPut = document.querySelector("#height");
 inPut.addEventListener("input", myFunction);
 
 function myFunction() {
-  let inP = document.querySelector("#height").value;
+  let inP = document.getElementById("height").value;
   printPyramid(inP);
 }

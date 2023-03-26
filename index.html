@@ -1,36 +1,41 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-    <style>
-
-        #pyramid {
-            line-height: 0;
-            font-size: 30px;
-        }
-
-        body {
-            font-family: "Courier New", monospace;
-            text-align: center;
-        }
-    </style>
+  <link rel="stylesheet" href="mario.css">
 </head>
-<body >
-    <h1>Pyramid Slide</h1>
 
-    <br>
+<body>
+  <h1 id="header">Pyramid Slide</h1>
 
-    <div>
-  
-      <label>How high?</label>
-  
-      <input type="range" min = "0" max = "20" value = "myFunction()" id="height"/>
+  <br>
+
+  <div id="div1">
     
-      <br><br>
+    <div id="div2">
+      
+      <label id="lab1">Brick Symbol: </label>
+        
+      <select id="dropdown" onchange="myFunction()">
+        <option value="#">#</option>
+        <option value="@">@</option>
+        <option value="X">X</option>
+        <option value="$">$</option>
+      </select>
   
-      <div id="pyramid"></div>
+      <label id="lab2">How high?</label>
+  
+      <input type="range" min="1" max="20" value="myFunction()" id="height"/>
+  
+      <label id="lab3"></label>
 
     </div>
+    
+    <div id="pyramid"></div>
 
-    <script src="mario.js"></script>
+  </div>
+
+  <script src="mario.js"></script>
 </body>
+
 </html>
